@@ -31,21 +31,21 @@ function playRound(humanChoice) {
         (humanChoice === "paper" && computerChoice === "rock") ||
         (humanChoice === "scissors" && computerChoice === "paper")
     ) {
-        resultText +=  (`You won! ${humanChoice} beats ${computerChoice}`);
-        
+        resultText +=  `You won! ${humanChoice} beats ${computerChoice}`;
+        humanScore++;
     } else {
-        resultText += (`You lost! ${computerChoice} beats ${humanChoice}`);
-        return "lose";
+        resultText += `You lost! ${computerChoice} beats ${humanChoice}`;
+        computerScore++;
     }
 
     resultDiv.textContent = resultText;
-    scoreDiv.textContent = `Score: You - ${humanScore}, computer - ${computerScore}`;
+    scoreDiv.textContent = `Score: You - ${humanScore}, computer - ${computerScore}. `;
 
     if (humanScore === 5) {
         resultDiv.innerText = "You won the game";
         disableButtons();
     } else if (computerScore === 5) {
-        resultDiv.innerTetx = "Computer wom the game";
+        resultDiv.innerTetx = "Computer won the game";
     }
 }
 
@@ -92,6 +92,7 @@ function playGame() {
 }
 */
 
+/*
 playGame();
-
+*/
 
