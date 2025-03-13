@@ -13,8 +13,8 @@ function getHumanChoice() {
 }
 */
 
-function playRound(humanChoice, computerChoice) {
-    const computerChoice = getComputerChoice;
+function playRound(humanChoice) {
+    const computerChoice = getComputerChoice();
 
     console.log(`You chose: ${humanChoice}, Computer chose: ${computerChoice}`);
 
