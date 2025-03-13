@@ -3,6 +3,7 @@ function getComputerChoice() {
     return choices[Math.floor(Math.random() * 3)];
 }
 
+/*
 function getHumanChoice() {
     let choice;
     do  {
@@ -10,8 +11,11 @@ function getHumanChoice() {
     } while (!["rock", "paper", "scissors"].includes(choice));
     return choice;
 }
+*/
 
 function playRound(humanChoice, computerChoice) {
+    const computerChoice = getComputerChoice;
+
     console.log(`You chose: ${humanChoice}, Computer chose: ${computerChoice}`);
 
     if (humanChoice === computerChoice) {
@@ -30,11 +34,16 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+document.getElementById("rock").addEventListener("click", () => playRound("rock"));
+document.getElementById("paper").addEventListener("click", () => playRound("paper"));
+document.getElementById("scissors").addEventListener("click", () => playRound("scissors"));
+
+/*
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
 
-    console.log("Welcome to trhe game! Best of 5 rounds.");
+    console.log("Welcome to the game! Best of 5 rounds.");
 
     for (let i = 0; i < 5; i++) {
         console.log(`Round ${i}: `);
@@ -60,7 +69,9 @@ function playGame() {
         console.log("The game ended in a draw!");
     }
 }
+*/
 
-playGame();
-
+/*
+playRound();
+*/
 
